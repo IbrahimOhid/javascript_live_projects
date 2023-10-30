@@ -1,16 +1,19 @@
-const inputValue = document.querySelector('#value');
+const countValue = document.querySelector('#countValue');
 const plusBtn = document.querySelector('#plusBtn');
-const minusBtn = document.querySelector('#minusBtn');
 const iphoneBalance = document.querySelector('#iphoneBalance');
 
 plusBtn.addEventListener('click', () => {
-    const plusValue = inputValue.value++;
-    value.innerText = plusValue;
-    const totalIphoneBalance = iphoneBalance.innerText;
-    const finalIphoneBalance = totalIphoneBalance * 2;
-    iphoneBalance.innerHTML = finalIphoneBalance;
+   const plusValue = parseInt(countValue.value);
+   const increaseCount = plusValue + 1;
+   countValue.value = increaseCount;
+   const totalIphoneAmount = increaseCount * 1219;
+   iphoneBalance.innerText = totalIphoneAmount;
+
 })
 
-minusBtn.addEventListener('click', () => {
-    
-})
+
+const minusBtn = document.querySelector('#minusBtn');
+// minusBtn.addEventListener('click', () => {
+//     const minusValue = parseInt(inputValue.value--);
+//     countValue.innerText = minusValue;
+// })
