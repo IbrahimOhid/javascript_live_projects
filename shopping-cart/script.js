@@ -1,19 +1,61 @@
-const countValue = document.querySelector('#countValue');
-const plusBtn = document.querySelector('#plusBtn');
-const iphoneBalance = document.querySelector('#iphoneBalance');
+//Plus Btn event Handler
 
-plusBtn.addEventListener('click', () => {
-   const plusValue = parseInt(countValue.value);
+const phoneCountValue = document.querySelector('#phoneCountValue');
+const phonePlusBtn = document.querySelector('#phonePlusBtn');
+const iphoneBalance = document.querySelector('#iphoneBalance');
+const subTotal = document.querySelector('#subTotal')
+
+phonePlusBtn.addEventListener('click', () => {
+   const plusValue = parseInt(phoneCountValue.value);
    const increaseCount = plusValue + 1;
-   countValue.value = increaseCount;
-   const totalIphoneAmount = increaseCount * 1219;
-   iphoneBalance.innerText = totalIphoneAmount;
+   phoneCountValue.value = increaseCount;
+   const totalIncreaseIphoneAmount = increaseCount * 1219;
+   iphoneBalance.innerText = totalIncreaseIphoneAmount;
+   const subTotalValue = parseInt(subTotal.innerText);
+   const finalSubTotal = totalIncreaseIphoneAmount + subTotalValue;
+   subTotal.innerText = finalSubTotal;
+   
 
 })
 
+//minus Btn event Handler
 
-const minusBtn = document.querySelector('#minusBtn');
-// minusBtn.addEventListener('click', () => {
-//     const minusValue = parseInt(inputValue.value--);
-//     countValue.innerText = minusValue;
-// })
+const phoneMinusBtn = document.querySelector('#phoneMinusBtn');
+
+phoneMinusBtn.addEventListener('click', () => {
+   const minusValue = parseInt(phoneCountValue.value);
+   const decreaseCount = minusValue - 1;
+   phoneCountValue.value = decreaseCount;
+   const totalDecreaseIphoneAmount = decreaseCount * 1219;
+   iphoneBalance.innerHTML = totalDecreaseIphoneAmount;
+})
+
+//Plus Btn event Handler
+
+const caseCountValue = document.querySelector('#caseCountValue');
+const casePlusBtn = document.querySelector('#casePlusBtn');
+const caseBalance = document.querySelector('#caseBalance');
+
+
+casePlusBtn.addEventListener('click', () => {
+   const plusValue = parseInt(caseCountValue.value);
+   const increaseCount = plusValue + 1;
+   caseCountValue.value = increaseCount;
+   const totalIncreaseIphoneAmount = increaseCount * 59;
+   caseBalance.innerText = totalIncreaseIphoneAmount;
+   
+
+})
+
+//minus Btn event Handler
+
+const caseMinusBtn = document.querySelector('#caseMinusBtn');
+
+caseMinusBtn.addEventListener('click', () => {
+   const minusValue = parseInt(caseCountValue.value);
+   const decreaseCount = minusValue - 1;
+   caseCountValue.value = decreaseCount;
+   const totalDecreaseIphoneAmount = decreaseCount * 59;
+   caseBalance.innerHTML = totalDecreaseIphoneAmount;
+})
+
