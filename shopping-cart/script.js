@@ -1,3 +1,4 @@
+//Iphone 11 
 //Plus Btn event Handler
 
 const phoneCountValue = document.querySelector('#phoneCountValue');
@@ -11,11 +12,6 @@ phonePlusBtn.addEventListener('click', () => {
    phoneCountValue.value = increaseCount;
    const totalIncreaseIphoneAmount = increaseCount * 1219;
    iphoneBalance.innerText = totalIncreaseIphoneAmount;
-   const subTotalValue = parseInt(subTotal.innerText);
-   const finalSubTotal = totalIncreaseIphoneAmount + subTotalValue;
-   subTotal.innerText = finalSubTotal;
-   
-
 })
 
 //minus Btn event Handler
@@ -30,6 +26,8 @@ phoneMinusBtn.addEventListener('click', () => {
    iphoneBalance.innerHTML = totalDecreaseIphoneAmount;
 })
 
+
+//case
 //Plus Btn event Handler
 
 const caseCountValue = document.querySelector('#caseCountValue');
