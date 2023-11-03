@@ -1,59 +1,72 @@
-//Iphone 11 
-//Plus Btn event Handler
+//Phone ⤵
 
-const phoneCountValue = document.querySelector('#phoneCountValue');
-const phonePlusBtn = document.querySelector('#phonePlusBtn');
-const iphoneBalance = document.querySelector('#iphoneBalance');
-const subTotal = document.querySelector('#subTotal')
+const phoneMinus = document.querySelector('#phone-minus');
+const phonePlus = document.querySelector('#phone-plus');
+const phoneTotal = document.querySelector('#phone-total');
+const phoneAmount = document.querySelector('#phone-amount');
 
-phonePlusBtn.addEventListener('click', () => {
-   const plusValue = parseInt(phoneCountValue.value);
-   const increaseCount = plusValue + 1;
-   phoneCountValue.value = increaseCount;
-   const totalIncreaseIphoneAmount = increaseCount * 1219;
-   iphoneBalance.innerText = totalIncreaseIphoneAmount;
-})
+function updatePhoneChange(isIncrease){
+   const increasePhone = parseInt(phoneTotal.value);
+   if(isIncrease == true){
+      phoneTotal.value = increasePhone + 1;
+   }
+   else if(isIncrease == false &&  increasePhone > 0){
+      phoneTotal.value = increasePhone - 1;
+   }
+   const totalPhoneAmount = parseInt(phoneTotal.value);
+   phoneAmount.innerText = totalPhoneAmount * 1219;
 
-//minus Btn event Handler
+   calculateTotal();
+}
 
-const phoneMinusBtn = document.querySelector('#phoneMinusBtn');
-
-phoneMinusBtn.addEventListener('click', () => {
-   const minusValue = parseInt(phoneCountValue.value);
-   const decreaseCount = minusValue - 1;
-   phoneCountValue.value = decreaseCount;
-   const totalDecreaseIphoneAmount = decreaseCount * 1219;
-   iphoneBalance.innerHTML = totalDecreaseIphoneAmount;
-})
-
-
-//case
-//Plus Btn event Handler
-
-const caseCountValue = document.querySelector('#caseCountValue');
-const casePlusBtn = document.querySelector('#casePlusBtn');
-const caseBalance = document.querySelector('#caseBalance');
-
-
-casePlusBtn.addEventListener('click', () => {
-   const plusValue = parseInt(caseCountValue.value);
-   const increaseCount = plusValue + 1;
-   caseCountValue.value = increaseCount;
-   const totalIncreaseIphoneAmount = increaseCount * 59;
-   caseBalance.innerText = totalIncreaseIphoneAmount;
+phonePlus.addEventListener('click', () => {
+   updatePhoneChange(true);
    
+});
 
+phoneMinus.addEventListener('click', () => {
+   updatePhoneChange(false)
+   
 })
 
-//minus Btn event Handler
+//Case ⤵
 
-const caseMinusBtn = document.querySelector('#caseMinusBtn');
+const caseMinus = document.querySelector('#case-minus');
+const casePlus = document.querySelector('#case-plus');
+const caseTotal = document.querySelector('#case-total');
+const caseAmount = document.querySelector('#case-amount');
 
-caseMinusBtn.addEventListener('click', () => {
-   const minusValue = parseInt(caseCountValue.value);
-   const decreaseCount = minusValue - 1;
-   caseCountValue.value = decreaseCount;
-   const totalDecreaseIphoneAmount = decreaseCount * 59;
-   caseBalance.innerHTML = totalDecreaseIphoneAmount;
+function updateCaseChange(isIncrease){
+   const increaseCase = parseInt(caseTotal.value);
+   if(isIncrease == true){
+      caseTotal.value = increaseCase + 1;
+   }
+   else if(isIncrease == false &&  increaseCase > 0){
+      caseTotal.value = increaseCase - 1;
+   }
+   const totalCaseAmount = parseInt(caseTotal.value);
+   caseAmount.innerText = totalCaseAmount * 59;
+
+   calculateTotal();
+}
+
+casePlus.addEventListener('click', () => {
+   updateCaseChange(true);
+   
+});
+
+caseMinus.addEventListener('click', () => {
+   updateCaseChange(false)
+   
 })
+
+const totalPrice = document.querySelector('#total-price');
+
+function calculateTotal(){
+   const phoneAmountPrice = parseInt(phoneTotal.value);
+   const caseAmountPrice = parseInt(caseTotal.value)
+   const totalPriceAmount = phoneAmountPrice * 1219 + caseAmountPrice * 59;
+   totalPrice.innerText = totalPriceAmount;
+}
+
 
