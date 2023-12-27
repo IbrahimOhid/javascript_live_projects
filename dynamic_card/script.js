@@ -5,7 +5,7 @@ const fetchData = async (config) => {
     } catch(error){
         throw Error("Data is Not Fetch");
     }
-    
+
 }
 
 
@@ -25,3 +25,7 @@ const loadAllPosts = async () => {
 }
 
 loadAllPosts()
+
+
+
+
