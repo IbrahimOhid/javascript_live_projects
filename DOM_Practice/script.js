@@ -1,5 +1,11 @@
-console.log(1);
-setTimeout(() => {
-    console.log(2);
-}, 2000);
-console.log(3);
+const Body = document.querySelector('body');
+const isBlue = false;
+
+setInterval(() => {
+    if(isBlue){
+        Body.style.background = 'white';
+    }
+    else{
+        Body.style.background = 'blue';
+    }
+}, 1000);
