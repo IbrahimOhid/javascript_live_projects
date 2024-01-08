@@ -2,7 +2,7 @@
 const InputText = document.querySelector('#input-text');
 const AddTodo = document.querySelector('#add-todo');
 const Lists = document.querySelector('#lists');
-const TodoRemove = document.querySelector('#todo-remove');
+
 
 
 const newTodo = (event) => {
