@@ -9,13 +9,13 @@ const CalculateBtn = Form.querySelector('#calculate-btn')
 
 CalculateBtn.addEventListener('click', (event) => {
     event.preventDefault();
-    const numberOne = NumberOne.value;
-    const numberTwo = NumberTwo.value;
-    const Addition = parseFloat(numberOne + numberTwo);
-    const Subtraction = parseFloat(numberOne - numberTwo);
-    const Multiplication = parseFloat(numberOne * numberTwo);
-    const Division = parseFloat(numberOne / numberTwo);
-    const Modulus = parseFloat(numberOne % numberTwo);
+    const numberOne = parseFloat(NumberOne.value);
+    const numberTwo = parseFloat(NumberTwo.value);
+    const Addition = numberOne + numberTwo;
+    const Subtraction = numberOne - numberTwo;
+    const Multiplication = numberOne * numberTwo;
+    const Division = numberOne / numberTwo;
+    const Modulus = numberOne % numberTwo;
     if(SelectCalculation.value === 'addition'){
         Result.innerHTML = Addition;
     }
