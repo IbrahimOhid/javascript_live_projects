@@ -1,3 +1,4 @@
+// select element
 const Days = document.querySelector('#days');
 const Hours = document.querySelector('#hours');
 const Minutes = document.querySelector('#minutes');

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Word & Character Count</title>
+  </head>
+  <body>
+    <div class="bg-dark" style="height: 100vh;">
+        <h2 class="text-white text-uppercase text-center text-decoration-underline py-5">Word & Character Counter</h2>
+        <div class="card mx-auto" style="width: 300px;">
+            <div class="card-body">
+              <h5 class="card-title" >Total Word :- <span id="word"></span> </h5>
+              <h5 class="card-text" id="character">Total Character :- </h5>
+            </div>
+          </div>
+          <div class="card mx-auto mt-3" style="width: 500px;">
+            <textarea name="" id="textarea" rows="10" placeholder="Type/Paste Your Text Here"></textarea>
+            <button class="btn btn-danger mt-2" id="clear-btn">Clear Text</button>
+        </div>
+    </div>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!--js link-->
+    <script src="/word-and-character-count/script.js"></script>
+  </body>
+</html>
