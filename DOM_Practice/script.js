@@ -10,9 +10,14 @@
 //     }
 // }, 1000);
 
-function operation(a, b){
-    c = a + b;
-    d = a - b;
-    console.log(c, d)
+// function operation(a, b) {
+//     c = a + b;
+//     d = a - b;
+//     console.log(c, d)
+// }
+// operation(10, 8);
+
+function fullName(firstName, lastName) {
+    return (firstName + lastName);
 }
-operation(10, 8);
+fullName(Mohammad, ibrahim);
