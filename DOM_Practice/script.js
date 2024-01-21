@@ -17,7 +17,13 @@
 // }
 // operation(10, 8);
 
-function fullName(firstName, lastName) {
-    return (firstName + lastName);
+function sayName(name) {
+    return 'Hello ' + name;
 }
-fullName(Mohammad, ibrahim);
+var names = sayName;
+var fullName = names('Ibrahim Ohid')
+//console.log(fullName);
+
+var num = [1, 2, 4];
+num.push = fullName;
+console.log(num);

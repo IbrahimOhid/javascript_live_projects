@@ -1,3 +1,4 @@
 {
-  "autoimport.doubleQuotes": true
+  "autoimport.doubleQuotes": true,
+  "quokka.automaticRestart": true
 }
