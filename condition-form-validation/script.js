@@ -1,6 +1,7 @@
 // select all needed element
 const BanglaNumber = document.querySelector('#bangla-number');
 const EnglishNumber = document.querySelector('#english-number');
+const SubmitBtn = document.querySelector('#submit');
 
 
 
