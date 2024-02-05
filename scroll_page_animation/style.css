@@ -1,0 +1,18 @@
+.div1{
+    background-image: url("/scroll_page_animation/computer.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 800px;
+    width: 100%;
+}
+.main{
+   opacity: 1;
+   transition: all 1s ease-in-out;
+   transform: scale(0.1);
+}
+.active{
+    opacity: 1;
+    transform: scale(1);
+}
