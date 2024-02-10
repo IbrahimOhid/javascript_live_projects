@@ -1,7 +1,7 @@
 // select all needed element
 const InputText = document.querySelector('#input-text');
 
-
+// EventListener
 InputText.addEventListener('input', () => {
     const Image = document.querySelectorAll('.image');
     var ImgLen = Image.length;

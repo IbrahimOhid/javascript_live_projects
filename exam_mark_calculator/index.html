@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Exam Mark Calculator</title>
+</head>
+
+<body>
+    <div>
+        <form action="" class="mx-auto text-center py-3 mt-5 px-5 w-50" style="background: rgb(252, 34, 70);">
+            <h1 class="mb-3 text-white text-decoration-underline">Javascript Exam Mark Calculator</h1>
+            <input class="mb-3 py-1 px-5 border-0" id="math" placeholder="Enter a Math Mark" type="text" name="" id=""><br>
+            <input class="mb-3 py-1 px-5 border-0" id="english" placeholder="Enter a English Mark" type="text" name="" id=""><br>
+            <input class="mb-3 py-1 px-5 border-0" id="bangla" placeholder="Enter a Bangla Mark" type="text" name="" id=""><br>
+            <input class="mb-3 py-1 px-5 border-0" id="science" placeholder="Enter a Science Mark" type="text" name="" id=""><br>
+            <button class="text-center text-white py-1 px-5 border-0" id="submit" style="background-color: rgb(37, 25, 210); border-radius: 5px;">SUBMIT</button>
+            <div class="mt-4 text-white" style="text-align: justify; margin-left: 27%;">
+                
+                    <h5>Total Mark (Out of 400) : <span id="mark"></span> </h5>
+                    <h5>Average : <span id="average"></span> </h5>
+                    <h5>Grade : <span id="grade"></span> </h5>
+                    <h5>Pass / Fail : <span id="pass-fail"></span> </h5>
+            </div>
+        </form>
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!--js link-->
+    <script src="/exam_mark_calculator/script.js"></script>
+</body>
+
+</html>

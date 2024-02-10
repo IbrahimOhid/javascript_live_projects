@@ -17,13 +17,28 @@
 // }
 // operation(10, 8);
 
-function sayName(name) {
-    return 'Hello ' + name;
-}
-var names = sayName;
-var fullName = names('Ibrahim Ohid')
-//console.log(fullName);
+// function sayName(name) {
+//     return 'Hello ' + name;
+// }
+// var names = sayName;
+// var fullName = names('Ibrahim Ohid')
+// //console.log(fullName);
 
-var num = [1, 2, 4];
-num.push = fullName;
-console.log(num);
+// var num = [1, 2, 4];
+// num.push = fullName;
+// console.log(num);
+
+// OOP
+
+var ract={
+    width: 10,
+    height: 20
+
+    calculateArea.function(){
+        return this.width  * this.height
+    }
+
+    
+}
+var area = ract.calculateArea();
+console.log(area);
