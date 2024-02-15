@@ -1,0 +1,40 @@
+table{
+    width: 300px;
+    border: 2px solid black;
+}
+.num{
+     height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50px;
+    border: 0;
+    font-size: 20px; 
+    font-weight: bolder;
+}
+.num:hover{
+    background: #25f8dc;
+}
+#result{
+    width: 300px;
+    height: 50px;
+    border: 0;
+    font-size: 20px;
+    text-align: right;
+    padding: 10px;
+    color: #321975;
+    font-weight: bolder;
+}
+.method{
+    background-color: #f82525;
+    color: white;
+}
+.method:hover{
+    background: #242fd3;
+}
+.clear{
+    background-color:#25f88f;
+    color: white;
+}
+.clear:hover{
+    background: #bc25f8;
+}
