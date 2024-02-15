@@ -10,15 +10,17 @@ table{
     border: 0;
     font-size: 20px; 
     font-weight: bolder;
+    background-color: #2525f8;
+    color: white;
 }
 .num:hover{
-    background: #25f8dc;
+    background: #7df825;
 }
 #result{
     width: 300px;
     height: 50px;
     border: 0;
-    font-size: 20px;
+    font-size: 22px;
     text-align: right;
     padding: 10px;
     color: #321975;
@@ -29,7 +31,7 @@ table{
     color: white;
 }
 .method:hover{
-    background: #242fd3;
+    background: #24d3a4;
 }
 .clear{
     background-color:#25f88f;

@@ -15,7 +15,7 @@
 
 <body>
     <div class="py-4">
-    <h1 class="text-center text-decoration-underline text-uppercase" style="color: rgb(248, 59, 59);">Simple Calculator</h1>
+    <h2 class="text-center text-decoration-underline text-uppercase" style="color: rgb(248, 59, 59);">Simple Calculator</h2>
     <table class="mx-auto  text-center border-2 mt-3" style="background-color: rgb(8, 8, 8);">
 
         <tr>
@@ -23,38 +23,38 @@
         </tr>
 
         <tr class="d-flex justify-content-center gap-2 mt-2 pt-2">
-            <td><input class="num clear" type="button" name="" id="" value="C"></td>
-            <td><input class="num clear" type="button" name="" id="" value="("></td>
-            <td><input class="num clear" type="button" name="" id="" value=")"></td>
-            <td><input class="num method" type="button" name="" id="" value="%"></td>
+            <td><input class="num clear" type="button" onclick="resultClear()" name="" id="" value="C"></td>
+            <td><input class="num clear" type="button" onclick="calculate('(')" name="" id="" value="("></td>
+            <td><input class="num clear" type="button" onclick="calculate(')')" name="" id="" value=")"></td>
+            <td><input class="num method" type="button" onclick="calculate('%')" name="" id="" value="%"></td>
         </tr>
 
         <tr class="d-flex justify-content-center gap-2 mt-2">
-            <td><input class="num" type="button" name="" id="" value="7"></td>
-            <td><input class="num" type="button" name="" id="" value="8"></td>
-            <td><input class="num" type="button" name="" id="" value="9"></td>
-            <td><input class="num method" type="button" name="" id="" value="+"></td>
+            <td><input class="num" type="button" onclick="calculate('7')" name="" id="" value="7"></td>
+            <td><input class="num" type="button" onclick="calculate('8')" name="" id="" value="8"></td>
+            <td><input class="num" type="button" onclick="calculate('9')" name="" id="" value="9"></td>
+            <td><input class="num method" type="button" onclick="calculate('+')" name="" id="" value="+"></td>
         </tr>
 
         <tr class="d-flex justify-content-center gap-2 mt-2">
-            <td><input class="num" type="button" name="" id="" value="4"></td>
-            <td><input class="num" type="button" name="" id="" value="5"></td>
-            <td><input class="num" type="button" name="" id="" value="6"></td>
-            <td><input class="num method" type="button" name="" id="" value="−"></td>
+            <td><input class="num" type="button" onclick="calculate('4')" name="" id="" value="4"></td>
+            <td><input class="num" type="button" onclick="calculate('5')" name="" id="" value="5"></td>
+            <td><input class="num" type="button" onclick="calculate('6')" name="" id="" value="6"></td>
+            <td><input class="num method" type="button" onclick="calculate('-')" name="" id="" value="−"></td>
         </tr>
 
         <tr class="d-flex justify-content-center gap-2 mt-2">
-            <td><input class="num" type="button" name="" id="" value="1"></td>
-            <td><input class="num" type="button" name="" id="" value="2"></td>
-            <td><input class="num" type="button" name="" id="" value="3"></td>
-            <td><input class="num method"  type="button" name="" id="" value="×"></td>
+            <td><input class="num" type="button" onclick="calculate('1')" name="" id="" value="1"></td>
+            <td><input class="num" type="button" onclick="calculate('2')" name="" id="" value="2"></td>
+            <td><input class="num" type="button" onclick="calculate('3')" name="" id="" value="3"></td>
+            <td><input class="num method"  type="button" onclick="calculate('*')" name="" id="" value="×"></td>
         </tr>
 
         <tr class="d-flex justify-content-center gap-2 mt-1 pb-3">
-            <td><input class="num" type="button" name="" id="" value="0"></td>
-            <td><input class="num" type="button" name="" id="" value="."></td>
-            <td><input class="num" type="button" name="" id="" value="÷"></td>
-            <td><input class="num method" type="button" name="" id="" value="="></td>
+            <td><input class="num" type="button" onclick="calculate('0')" name="" id="" value="0"></td>
+            <td><input class="num" type="button" onclick="calculate('.')" name="" id="" value="•"></td>
+            <td><input class="num" type="button" onclick="calculate('/')" name="" id="" value="÷"></td>
+            <td><input class="num method" onclick="result()" type="button" name="" id="" value="="></td>
         </tr>
     </table>
     </div>
