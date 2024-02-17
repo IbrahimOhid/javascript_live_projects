@@ -28,17 +28,52 @@
 // num.push = fullName;
 // console.log(num);
 
-// OOP
+// Object Oriented Programming
 
-var ract={
-    width: 10,
-    height: 20
+// const computer = function(){
+//     console.log(this);
+// }
+// const pc = new computer();
 
-    calculateArea.function(){
-        return this.width  * this.height
+// const obj = {};
+// obj.name = "Mohammad";
+// obj.age = 26;
+// console.log(obj);
+
+// const Computer = function(name, model, manuYear){
+//     this.name = name;
+//     this.model = model;
+//     this.manuYear = manuYear;
+//     this.aboutInfo = function(){
+//         console.log(`This Computer Name is ${this.name} and Model is ${this.model}`);
+//     }
+// }
+// const dell = new Computer('Dell', 'DK139O', '2020');
+// const hp = new Computer('HP', 'JFD023', '2022');
+// const lenovo = new Computer('LENOVO', 'TJD023', '2024');
+
+// dell.aboutInfo();
+// lenovo.aboutInfo();
+
+
+// console.log(dell);
+// console.log(hp);
+// console.log(lenovo);
+
+// const arr = [2, 7, 8, 10, 100, 99, 33, 31];
+// const evenNum = arr.filter(Element => Element % 2 === 0);
+// const oddNum = arr.filter(Element => Element % 2 === 1);
+// console.log(evenNum);
+// console.log(oddNum);
+
+Array.prototype.filter = function () {
+    var arr = [];
+    for (var i = 0; i < this.length; i++) {
+        if (this[i] % 2 === 0) {
+            arr.push(this[i]);
+        }
+        return arr;
     }
-
-    
 }
-var area = ract.calculateArea();
-console.log(area);
+
+console.log([1, 2, 4, 5, 10, 98, 100].filter());
