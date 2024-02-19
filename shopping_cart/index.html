@@ -19,57 +19,67 @@
 </head>
 
 <body>
+  <!--shopping cart start here-->
   <div class="container">
     <h1 class="text-center text-decoration-underline">Shopping Cart Using JavaScript</h1>
     <div class="d-flex gap-4 px-3 justify-content-center">
+      <!--cart one start here-->
       <div class="card px-2 py-2">
         <img src="/shopping_cart/img/breakfast1.png" class="card-img text-center" alt="...">
         <h4 class="card-title">Egg Benedict</h4>
         <h4 class="mt-1">$ 15.00</h4>
         <div class="mb-2">
-          <i id="phone-minus" class="fas fa-minus"></i>
-        <input type="button" id="count" value="0">
-        <i id="phone-plus" class="fas fa-plus"></i>
+          <i id="phone-minus" class="fas fa-minus" onclick="decrement('count')"></i>
+          <input type="button" id="count" value="0">
+          <i id="phone-plus" class="fas fa-plus" onclick="increment('count')"></i>
         </div>
         <button>Add to Cart</button>
       </div>
+      <!--cart one end here-->
+
+      <!--cart Two start here-->
       <div class="card px-2 py-2">
         <img src="/shopping_cart/img/dinner2.png" class="card-img" alt="...">
         <h5 class="card-title">Pork Tenderloin</h5>
         <h4 class="mt-1">$ 20.00</h4>
         <div class="mb-2">
-          <i id="phone-minus" class="fas fa-minus"></i>
-        <input type="button" id="count" value="0">
-        <i id="phone-plus" class="fas fa-plus"></i>
+          <i id="phone-minus" class="fas fa-minus" onclick="decrement('count1')"></i>
+          <input type="button" id="count1" value="0">
+          <i id="phone-plus" class="fas fa-plus" onclick="increment('count1')"></i>
         </div>
         <button>Add to Cart</button>
       </div>
+      <!--cart Two end here-->
+
+      <!--cart Three start here-->
       <div class="card px-2 py-2">
         <img src="/shopping_cart/img/dinner5.png" class="card-img" alt="...">
         <h4 class="card-title">Pork Tenderloin</h4>
         <h4 class="mt-1">$ 18.00</h4>
         <div class="mb-2">
-          <i id="phone-minus" class="fas fa-minus"></i>
-        <input type="button" id="count" value="0">
-        <i id="phone-plus" class="fas fa-plus"></i>
+          <i id="phone-minus" class="fas fa-minus" onclick="decrement('count2')"></i>
+          <input type="button" id="count2" value="0">
+          <i id="phone-plus" class="fas fa-plus" onclick="increment('count2')"></i>
         </div>
         <button>Add to Cart</button>
       </div>
+      <!--cart Three end here-->
     </div>
+    <!--cart details start here-->
     <div>
       <div class="text-center mt-1 card-details mx-auto">
         <h4 class="text-decoration-underline text-white">Card Details</h4>
-          <div>
-            <h5 class="text-white">Product Amount : <span></span></h5>
-            <h5 class="text-white">Delivery Charge : $ 1.00</h5>
-            <hr>
-            <h5 class="text-white pb-3">Total Product Amount : <span></span></h5>
-          </div>
+        <div>
+          <h5 class="text-white">Product Amount : <span></span></h5>
+          <h5 class="text-white">Delivery Charge : $ 1.00</h5>
+          <hr>
+          <h5 class="text-white pb-3">Total Product Amount : <span></span></h5>
+        </div>
       </div>
     </div>
+    <!--cart details end here-->
   </div>
-
-  <!-- Optional JavaScript; choose one of the two! -->
+  <!--shopping cart end here-->
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

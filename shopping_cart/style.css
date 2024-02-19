@@ -7,7 +7,7 @@
     background: #fa4545;
 }
 .card-img{
-   width: 250px;
+   width: 220px;
     
 }
 h1{
@@ -38,6 +38,7 @@ i{
     background-color: #13132d;
     color: white;
     padding: 5px;
+    cursor: pointer;
 }
 hr{
     border: 2px solid white;
