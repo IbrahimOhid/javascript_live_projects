@@ -22,3 +22,17 @@ function decrement(IncDec){
         count.value--;
     }
 }
+
+//select all Needed product price 
+const Price1 = document.querySelector('#price1');
+const Price2 = document.querySelector('#price2');
+const Price3 = document.querySelector('#price3');
+
+
+//add to cart event
+function addToCart(){
+const ProductOnePrice =  parseInt(Price1.textContent)  * count.value;
+const ProductTw0Price =  parseInt(Price2.textContent)  * count.value;
+const ProductThreePrice =  parseInt(Price3.textContent)  * count.value;
+
+}
