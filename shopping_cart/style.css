@@ -29,7 +29,7 @@ button{
     font-weight: bold;
     
 }
-#count{
+.input{
     width: 60px;
     border: 0;
     padding: 2px;
@@ -42,4 +42,8 @@ i{
 }
 hr{
     border: 2px solid white;
+}
+p{
+    color: white;
+    font-weight: bold;
 }

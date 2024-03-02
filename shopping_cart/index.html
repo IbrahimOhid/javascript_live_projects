@@ -29,11 +29,11 @@
         <h4 class="card-title">Egg Benedict</h4>
         <h4 class="mt-1">$ <span id="price1">15.00</span></h4>
         <div class="mb-2">
-          <i id="phone-minus" class="fas fa-minus" onclick="decrement('count')"></i>
-          <input type="button" id="count" value="0">
-          <i id="phone-plus" class="fas fa-plus" onclick="increment('count')"></i>
+          <i id="phone-minus" class="fas fa-minus" onclick="decrement('count1', 'price1', 'item1')"></i>
+          <input type="button" class="input" id="count1" value="0">
+          <i id="phone-plus" class="fas fa-plus" onclick="increment('count1', 'price1', 'item1')"></i>
         </div>
-        <button onClick="addToCart()">Add to Cart</button>
+        <p>Your Item: $ <span id="item1">0.00</span></p>
       </div>
       <!--cart one end here-->
 
@@ -43,11 +43,11 @@
         <h5 class="card-title">Pork Tenderloin</h5>
         <h4 class="mt-1">$ <span id="price2">20.00</span></h4>
         <div class="mb-2">
-          <i id="phone-minus" class="fas fa-minus" onclick="decrement('count1')"></i>
-          <input type="button" id="count1" value="0">
-          <i id="phone-plus" class="fas fa-plus" onclick="increment('count1')"></i>
+          <i id="phone-minus" class="fas fa-minus" onclick="decrement('count2', 'price2', 'item2')"></i>
+          <input type="button" class="input" id="count2" value="0">
+          <i id="phone-plus" class="fas fa-plus" onclick="increment('count2', 'price2', 'item2')"></i>
         </div>
-        <button onClick="addToCart()">Add to Cart</button>
+        <p>Your Item: $ <span id="item2">0.00</span></p>
       </div>
       <!--cart Two end here-->
 
@@ -57,11 +57,11 @@
         <h4 class="card-title">Pork Tenderloin</h4>
         <h4 class="mt-1">$ <span id="price3">18.00</span></h4>
         <div class="mb-2">
-          <i id="phone-minus" class="fas fa-minus" onclick="decrement('count2')"></i>
-          <input type="button" id="count2" value="0">
-          <i id="phone-plus" class="fas fa-plus" onclick="increment('count2')"></i>
+          <i id="phone-minus" class="fas fa-minus" onclick="decrement('count3', 'price3', 'item3')"></i>
+          <input type="button" class="input" id="count3" value="0">
+          <i id="phone-plus" class="fas fa-plus" onclick="increment('count3', 'price3', 'item3')"></i>
         </div>
-        <button onClick="addToCart()">Add to Cart</button>
+        <p>Your Item: $ <span id="item3">0.00</span></p>
       </div>
       <!--cart Three end here-->
     </div>
@@ -70,10 +70,10 @@
       <div class="text-center mt-1 card-details mx-auto">
         <h4 class="text-decoration-underline text-white">Card Details</h4>
         <div>
-          <h5 class="text-white">Product Amount : <span></span></h5>
+          <h5 class="text-white">Product Amount : $ <span id="product-amount">0.00</span></h5>
           <h5 class="text-white">Delivery Charge : $ 1.00</h5>
           <hr>
-          <h5 class="text-white pb-3">Total Product Amount : <span></span></h5>
+          <h5 class="text-white pb-2">Total Product Amount : <span></span></h5>
         </div>
       </div>
     </div>
