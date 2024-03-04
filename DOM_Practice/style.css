@@ -1,0 +1,49 @@
+.card{
+    height: auto;
+    width: 400px;
+    border-radius: 10px;
+    text-align: center;
+    display: inline;
+    background: #fa4545;
+}
+.card-img{
+   width: 220px;
+    
+}
+h1{
+    color: tomato;
+}
+.card-details{
+    background:  rgb(86, 29, 193);
+    border-radius: 10px;
+}
+.card-title, h4{
+    color: white;
+}
+button{
+    border: 0;
+    background-color: rgb(21, 12, 42);
+    color: white;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-weight: bold;
+    
+}
+.input{
+    width: 60px;
+    border: 0;
+    padding: 2px;
+}
+i{
+    background-color: #13132d;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+}
+hr{
+    border: 2px solid white;
+}
+p{
+    color: white;
+    font-weight: bold;
+}

@@ -66,14 +66,47 @@
 // console.log(evenNum);
 // console.log(oddNum);
 
-Array.prototype.filter = function () {
-    var arr = [];
-    for (var i = 0; i < this.length; i++) {
-        if (this[i] % 2 === 0) {
-            arr.push(this[i]);
-        }
-        return arr;
+// Array.prototype.filter = function () {
+//     var arr = [];
+//     for (var i = 0; i < this.length; i++) {
+//         if (this[i] % 2 === 0) {
+//             arr.push(this[i]);
+//         }
+//         return arr;
+//     }
+// }
+
+// console.log([1, 2, 4, 5, 10, 98, 100].filter());
+
+// plus button
+function increment(count, prc, itm){
+    const counts = document.getElementById(count);
+    const price = document.getElementById(prc);
+    const item = document.getElementById(itm);
+    const ProductAmount = document.querySelector('#product-amount');
+    if(counts.value >= 5){
+        counts.value = 5;
+        alert('Only Five Product Add');
+    }
+    else{
+        counts.value++;
+        const totalPrice = parseInt(price.innerHTML) + parseInt(item.innerHTML);
+        item.innerHTML = totalPrice;
+        const Amount = 
     }
 }
 
-console.log([1, 2, 4, 5, 10, 98, 100].filter());
+// minus button
+function decrement(count, prc, itm){
+    const counts = document.getElementById(count);
+    const price = document.getElementById(prc);
+    const item = document.getElementById(itm);
+    if(counts.value <= 0){
+        counts.value = 0;
+    }
+    else{
+        counts.value--;
+        const totalPrice = parseInt(item.innerHTML) - parseInt(price.innerHTML);
+        item.innerHTML = totalPrice;
+    }
+}
