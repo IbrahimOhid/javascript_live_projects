@@ -84,6 +84,8 @@ function increment(count, prc, itm){
     const price = document.getElementById(prc);
     const item = document.getElementById(itm);
     const ProductAmount = document.querySelector('#product-amount');
+    const DeliveryCharge = document.querySelector('#delivery-charge');
+    const TotalProductAmount = document.querySelector('#total-product-amount');
     if(counts.value >= 5){
         counts.value = 5;
         alert('Only Five Product Add');
@@ -92,7 +94,10 @@ function increment(count, prc, itm){
         counts.value++;
         const totalPrice = parseInt(price.innerHTML) + parseInt(item.innerHTML);
         item.innerHTML = totalPrice;
-        const Amount = 
+        const Amount = parseInt(price.innerHTML) + parseInt(ProductAmount.innerHTML);
+        ProductAmount.innerHTML = Amount;
+        const finalAmount = parseInt(DeliveryCharge.innerHTML) + parseInt(ProductAmount.innerHTML);
+        TotalProductAmount.innerHTML = finalAmount;
     }
 }
 
@@ -101,6 +106,9 @@ function decrement(count, prc, itm){
     const counts = document.getElementById(count);
     const price = document.getElementById(prc);
     const item = document.getElementById(itm);
+    const ProductAmount = document.querySelector('#product-amount');
+    const DeliveryCharge = document.querySelector('#delivery-charge');
+    const TotalProductAmount = document.querySelector('#total-product-amount');
     if(counts.value <= 0){
         counts.value = 0;
     }
@@ -108,5 +116,9 @@ function decrement(count, prc, itm){
         counts.value--;
         const totalPrice = parseInt(item.innerHTML) - parseInt(price.innerHTML);
         item.innerHTML = totalPrice;
+        const Amount = parseInt(ProductAmount.innerHTML) - parseInt(price.innerHTML);
+        ProductAmount.innerHTML = Amount;
+        const finalAmount = parseInt(ProductAmount.innerHTML) + parseInt(DeliveryCharge.innerHTML);
+        TotalProductAmount.innerHTML = finalAmount;
     }
 }
