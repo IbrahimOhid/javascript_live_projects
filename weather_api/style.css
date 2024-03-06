@@ -1,0 +1,25 @@
+body  {
+    background-image: url(/weather_api/img/weather.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    
+  }
+  button{
+    border-radius: 5px;
+  }
+  input{
+    border-radius: 5px;
+  }
+  h4, h5{
+    color: white;
+    font-size: 30px;
+  }
+  .weather{
+    background-color: rgba(16, 16, 16, 0.574);
+    width: 500px;
+    padding: 20px;
+    margin-top: 130px;
+    text-align: center;
+  }
