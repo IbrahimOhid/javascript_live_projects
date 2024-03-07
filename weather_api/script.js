@@ -21,5 +21,6 @@ Button.addEventListener('click', ()=>{
         Temperature.innerHTML = FinalTem.toFixed(2);
         Description.innerHTML = CurrentDec;
     })
+    .catch(alert('Input Valid City Name'));
     
 })
