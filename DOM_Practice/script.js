@@ -79,46 +79,47 @@
 // console.log([1, 2, 4, 5, 10, 98, 100].filter());
 
 // plus button
-function increment(count, prc, itm){
-    const counts = document.getElementById(count);
-    const price = document.getElementById(prc);
-    const item = document.getElementById(itm);
-    const ProductAmount = document.querySelector('#product-amount');
-    const DeliveryCharge = document.querySelector('#delivery-charge');
-    const TotalProductAmount = document.querySelector('#total-product-amount');
-    if(counts.value >= 5){
-        counts.value = 5;
-        alert('Only Five Product Add');
-    }
-    else{
-        counts.value++;
-        const totalPrice = parseInt(price.innerHTML) + parseInt(item.innerHTML);
-        item.innerHTML = totalPrice;
-        const Amount = parseInt(price.innerHTML) + parseInt(ProductAmount.innerHTML);
-        ProductAmount.innerHTML = Amount;
-        const finalAmount = parseInt(DeliveryCharge.innerHTML) + parseInt(ProductAmount.innerHTML);
-        TotalProductAmount.innerHTML = finalAmount;
-    }
-}
+// function increment(count, prc, itm){
+//     const counts = document.getElementById(count);
+//     const price = document.getElementById(prc);
+//     const item = document.getElementById(itm);
+//     const ProductAmount = document.querySelector('#product-amount');
+//     const DeliveryCharge = document.querySelector('#delivery-charge');
+//     const TotalProductAmount = document.querySelector('#total-product-amount');
+//     if(counts.value >= 5){
+//         counts.value = 5;
+//         alert('Only Five Product Add');
+//     }
+//     else{
+//         counts.value++;
+//         const totalPrice = parseInt(price.innerHTML) + parseInt(item.innerHTML);
+//         item.innerHTML = totalPrice;
+//         const Amount = parseInt(price.innerHTML) + parseInt(ProductAmount.innerHTML);
+//         ProductAmount.innerHTML = Amount;
+//         const finalAmount = parseInt(DeliveryCharge.innerHTML) + parseInt(ProductAmount.innerHTML);
+//         TotalProductAmount.innerHTML = finalAmount;
+//     }
+// }
 
 // minus button
-function decrement(count, prc, itm){
-    const counts = document.getElementById(count);
-    const price = document.getElementById(prc);
-    const item = document.getElementById(itm);
-    const ProductAmount = document.querySelector('#product-amount');
-    const DeliveryCharge = document.querySelector('#delivery-charge');
-    const TotalProductAmount = document.querySelector('#total-product-amount');
-    if(counts.value <= 0){
-        counts.value = 0;
-    }
-    else{
-        counts.value--;
-        const totalPrice = parseInt(item.innerHTML) - parseInt(price.innerHTML);
-        item.innerHTML = totalPrice;
-        const Amount = parseInt(ProductAmount.innerHTML) - parseInt(price.innerHTML);
-        ProductAmount.innerHTML = Amount;
-        const finalAmount = parseInt(ProductAmount.innerHTML) + parseInt(DeliveryCharge.innerHTML);
-        TotalProductAmount.innerHTML = finalAmount;
-    }
-}
+// function decrement(count, prc, itm){
+//     const counts = document.getElementById(count);
+//     const price = document.getElementById(prc);
+//     const item = document.getElementById(itm);
+//     const ProductAmount = document.querySelector('#product-amount');
+//     const DeliveryCharge = document.querySelector('#delivery-charge');
+//     const TotalProductAmount = document.querySelector('#total-product-amount');
+//     if(counts.value <= 0){
+//         counts.value = 0;
+//     }
+//     else{
+//         counts.value--;
+//         const totalPrice = parseInt(item.innerHTML) - parseInt(price.innerHTML);
+//         item.innerHTML = totalPrice;
+//         const Amount = parseInt(ProductAmount.innerHTML) - parseInt(price.innerHTML);
+//         ProductAmount.innerHTML = Amount;
+//         const finalAmount = parseInt(ProductAmount.innerHTML) + parseInt(DeliveryCharge.innerHTML);
+//         TotalProductAmount.innerHTML = finalAmount;
+//     }
+// }
+
