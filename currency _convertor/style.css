@@ -1,0 +1,17 @@
+body{
+    background-color: #40739e;
+    font-family: 'Inter', sans-serif;
+}
+.currency-div{
+    background-color: #0a3d62;
+    margin-top: 40px;
+}
+#btn{
+    background-color: #b71540;
+}
+#btn:hover{
+    background-color: #FC427B;
+}
+.exchange-img{
+    width: 100px;
+}
