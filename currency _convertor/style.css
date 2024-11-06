@@ -4,12 +4,12 @@ body{
 }
 .currency-div{
     background-color: #0a3d62;
-    margin-top: 40px;
+    margin-top: 20px;
 }
-#btn{
+#convert-btn{
     background-color: #b71540;
 }
-#btn:hover{
+#convert-btn:hover{
     background-color: #FC427B;
 }
 .exchange-img{
