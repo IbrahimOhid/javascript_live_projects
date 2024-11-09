@@ -1,45 +1,64 @@
-// selector
+// all selector
 const inputAmountElm = document.querySelector("#input_amount");
-const selectCurrencyElm = document.querySelector(".select-currency");
+const fromCurrencyElm = document.querySelector("#fromCurrency");
+const toCurrencyElm = document.querySelector("#toCurrency");
 const currentRateElm = document.querySelector("#current-rate");
 const convertBtnElm = document.querySelector("#convert-btn");
 const msgElm = document.querySelector("#msg");
 
-fetch("https://api.frankfurter.app/currencies ")
-  .then((res) => res.json())
-  .then((data) => {
-    displayData(data);
-  });
+let amount = 0;
+inputAmountElm.value = 1;
 
-function displayData(data) {
-  const allCurrencyCode = Object.entries(data);
-  for (let i = 0; i < allCurrencyCode.length; i++) {
-    selectCurrencyElm[0].innerHTML += `<option value="${allCurrencyCode[i][0]}">${allCurrencyCode[i][0]}</option>`;
-    selectCurrencyElm[1].innerHTML += `<option value="${allCurrencyCode[i][0]}">${allCurrencyCode[i][0]}</option>`;
-  }
+// api
+fetch('https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies.json')
+.then((res)=> res.json())
+.then((data)=>{
+    displayData(data)
+})
+
+function hideMsg(){
+    msgElm.textContent = '';
 }
 
-function showMessage(msg, action = "danger") {
-  const textMsg = `<div class="alert alert-${action}" role="alert">${msg}</div>`;
-  msgElm.insertAdjacentHTML = textMsg;
+function showMessage(msg, action='danger'){
+    const textMsg = `<div class="alert fw-bold text-center text-danger alert-${action}" role="alert">${msg}</div>`;
+    msgElm.insertAdjacentHTML('afterbegin', textMsg);
+    setTimeout(() => {
+        hideMsg();
+    }, 2000);
 }
-
-convertBtnElm.addEventListener("click", (e) => {
-  let currency1 = selectCurrencyElm[0].value;
-  let currency2 = selectCurrencyElm[0].value;
-  let inputValue = inputAmountElm.value;
-
-  if (currency1 != currency2) {
-    convert(currency1, currency2, inputValue);
-  } else {
-    showMessage("Chose Different Currencies!");
-  }
-});
-
-function convert(){
-    fetch(`https://api.frankfurter.app/latest?amount=${inputValue}&from=${currency1}&to=${currency2}`)
+    
+function convertCurrency(fromCurrencyElm, toCurrencyElm, amount){
+    fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${fromCurrencyElm}.json`)
     .then((res)=> res.json())
     .then((data)=>{
-        currentRateElm.inputValue = Object.values(data.rates)[0]
+        const rate = data[fromCurrencyElm][toCurrencyElm];
+
+        const convertAmount = (rate * amount).toFixed(2);
+        const showAmount = `${amount} ${fromCurrencyElm.toUpperCase()} = ${convertAmount} ${toCurrencyElm.toUpperCase()}`
+        currentRateElm.textContent = showAmount;
     })
 }
+
+function displayData(data){
+   for(let currency in data){
+    const selectOption = ` <option value="${currency}">${currency.toUpperCase()}</option>`;
+    fromCurrencyElm.innerHTML += selectOption;
+    toCurrencyElm.innerHTML += selectOption;
+   }
+
+   convertBtnElm.addEventListener('click',(e)=>{
+    e.preventDefault();
+    let fromCurrency = fromCurrencyElm.value;
+    let toCurrency = toCurrencyElm.value;
+    let amount = inputAmountElm.value;
+    if(fromCurrency != toCurrency){
+        convertCurrency(fromCurrency, toCurrency, amount)
+    }
+    else{
+        showMessage('Chose Different Currency')
+    }
+    
+   })
+}
+
